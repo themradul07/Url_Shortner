@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Toaster, toast } from 'sonner'
 
 export default function UrlShortenerForm() {
     const [longUrl, setLongUrl] = useState("");
@@ -12,17 +11,7 @@ export default function UrlShortenerForm() {
     const [LinksArray, setLinksArray] = useState([]);
 
     const notify = (msg) => {
-        toast.success(msg, {
-            position: "bottom-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-
-        });
+        toast.success(msg);
 
 
     }
@@ -69,12 +58,7 @@ export default function UrlShortenerForm() {
         <div className="max-w-screen overflow-hidden">
 
         
-            <ToastContainer
-                position="top-right"
-                autoClose={2000}
-
-            />
-            <ToastContainer />
+            <Toaster/>
             <div className="inset-0 -z-10 min-h-screen w-full bg-green-50 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] fill-green-200 bg-[size:6rem_4rem]">
   <div className="container max-w-full md:max-w-[65vw] mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex flex-col py-8 gap-5 text-center">
