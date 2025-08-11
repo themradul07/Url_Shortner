@@ -15,10 +15,10 @@ const Navbar = () => {
           <a className='hover:font-bold' href="">About</a>
         </li>
       </ul> */}
-      <div className='border border-green-700 flex gap-4 items-center justify-center px-3 py-2 bg-green-500 hover:bg-green-600 rounded-full'>
+      <a href='https://github.com/themradul07/Url_Shortner' className='border border-green-700 flex gap-4 items-center justify-center px-3 py-2 bg-green-500 hover:bg-green-600 rounded-full'>
         <img width={25} src="/github-mark.svg" className='' alt="" />
         <span className='text-black font-semibold'>GitHub</span>
-      </div>
+      </a>
     </nav>
   )
 }
